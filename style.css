@@ -46,6 +46,10 @@ form input, form button {
     height: 15%;
 }
 
+form input {
+    padding: 2%;
+}
+
 form button {
     margin-bottom: 0;
     font-size: 12pt;
@@ -63,4 +67,12 @@ form button:hover {
 
 form label {
     align-items: flex-start;
+}
+
+.valid {
+    color: green;
+}
+
+.invalid {
+    color: red;
 }
