@@ -1,127 +1,66 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Poppins, sans-serif;
 }
 
-body > header {
-    background-color: #2f3640;
-    padding: 16px 0;
-    color: #f5f6fa;
-}
-
-header .container {
+body {
+    background-image: repeating-linear-gradient(135deg, rgb(0,0,0) 0px, rgb(0,0,0) 10px,transparent 10px, transparent 11px),repeating-linear-gradient(22.5deg, rgb(0,0,0) 0px, rgb(0,0,0) 10px,transparent 10px, transparent 11px),linear-gradient(90deg, hsl(194,74%,56%),hsl(266,74%,56%),hsl(338,74%,56%),hsl(50,74%,56%),hsl(122,74%,56%));
+    width: 100vw;
+    height: 100vh;
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
-}
-
-header li {
-    display: inline;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    margin-left: 16px;
-}
-
-header li a {
-    color: #f5f6fa;
-    text-decoration: none;
-}
-
-header li a:hover {
-    text-decoration: underline;
 }
 
 .container {
-    width: 1366px;
-    margin: 0 auto;
+    text-align: center;
+    background: #fff;
+    width: 20%;
+    height: 50%;
+    border-radius: 25px;
 }
 
-.articles {
+.container h1 {
+    margin-top: 2%;
+    margin-bottom: 15%;
+}
+
+form {
+    width: 100%;
+    height: 50%;
+    padding: 0 10%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
-.articles article img {
-    /*height: 180px;*/
+form input, form button {
+    outline: none;
     width: 100%;
-    height: 250px;
+    margin-bottom: 5%;
+    height: 15%;
 }
 
-.articles article {
-    width: 30%;
-}
-
-section {
-    padding: 16px 0;
-}
-
-section h2, .articles article {
-    margin-bottom: 16px;
-}
-
-.articles article h3 {
-    margin-top: 8px;
-    margin-bottom: 8px;
-}
-
-.articles article a {
-    background-color: blue;
+form button {
+    margin-bottom: 0;
+    font-size: 12pt;
     color: #fff;
-    padding: 8px;
-    display: inline-block;
-    text-decoration: none;
-    font-weight: bold;
-    margin-top: 8px;
+    border: none;
+    background: linear-gradient(135deg,#3CBBE2,#843CE2,#E23C79,#E2C63C);
+    transition: 0.4s;
 }
 
-.articles article a:hover {
+form button:hover {
     cursor: pointer;
-    text-decoration: underline;
+    background: linear-gradient(135deg,#E2C63C,#E23C79,#843CE2,#3CBBE2);
+    box-shadow: 2px 2px 7px #E23C79;
 }
 
-.articles article p, .articles article a {
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.articles article h3 {
-    font-size: 24px;
-}
-
-section h2 {
-    font-size: 32px;
-}
-
-#sports {
-    background: rgba(0,255, 0, 0.1);
-}
-
-#sports .articles article a {
-    background: rgba(0,255, 0, 0.8);
-    color: #000;
-}
-
-#economy {
-    background-color: #f8F59F;
-}
-
-#economy .articles article a {
-    background-color: #FF9F1A;
-}
-
-#technology {
-    background-color: #67a8f2;
-}
-
-#technology .articles article a {
-    background-color: #300be9;
-}
-
-#entertainment {
-    background-color: #e803038d;
-}
-
-#entertainment .articles article a {
-    background-color: #ff0000;
+form label {
+    align-items: flex-start;
 }
