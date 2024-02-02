@@ -1,15 +1,26 @@
 $(document).ready(function () {
     mostraData();
     txtAtivaCheckbox();
-    popUp()
+    chamaPopUp();
+    validaForm();
+})
 
-    $('#form').on('submit', (e) => {
+function validaForm() {
+    $('.form').on('submit', (e) => {
         e.preventDefault();
 
-        const nomeAtividade = $('nome-atividade').val();
+        const nomeAtividade = $('#nome-tarefa').val();
+        const novaAtividade = $('<li style="display-none"></li>');
+        $('<input type="checkbox">').appendTo(novaAtividade);
+        novaAtividade.append(nomeAtividade);
+        novaAtividade.appendTo('ul');
+        novaAtividade.slideDown(500);
 
+        $('#nome-atividade').val('');
+        fechaPopUp();
+        txtAtivaCheckbox();
     })
-})
+}
 
 function txtAtivaCheckbox() {
     $('#lista-tarefas li').on('click', function () {
@@ -20,16 +31,24 @@ function txtAtivaCheckbox() {
     })
 }
 
-function popUp() {
-    $('.btn-add').on('click', () => {
-        $('.overlay').fadeIn(200);
-        $('.popup').fadeIn(200);
+function chamaPopUp() {
+    $('.btn-add').on('click', function () {
+        return ativaPopUp();
     })
 
-    $('#fechar').on('click', () => {
-        $('.overlay').fadeOut(200);
-        $('.popup').fadeOut(200);
+    $('#fechar').on('click', function () {
+        return fechaPopUp();
     })
+}
+
+function ativaPopUp() {
+    $('.overlay').fadeIn(200);
+    $('.popup').fadeIn(200);
+}
+
+function fechaPopUp() {
+    $('.overlay').fadeOut(200);
+    $('.popup').fadeOut(200);
 }
 
 function mostraData() {
