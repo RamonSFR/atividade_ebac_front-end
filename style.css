@@ -85,3 +85,50 @@ body {
     width: fit-content;
     font-size: 13pt;
 }
+
+.list {
+    margin-top: 10%;
+}
+
+.list ul {
+    list-style-type: none;
+}
+
+.list ul li {
+    color: #787878;
+    font-size: 14pt;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: 0.5s;
+    border-radius: 10px;
+}
+
+.list ul li:hover {
+    font-size: 15pt;
+    background-color: var(--color2);
+}
+
+.list ul li input[type="checkbox"] {
+    margin-right: 16px;
+}
+
+.btn-add {
+    font-size: 25pt;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    width: 100px;
+    height: 100px;
+    background: #f5e3ce;
+    border-radius: 50%;
+    position: absolute;
+    left: 48%;
+    bottom: 10%;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.btn-add:hover {
+    transform
+}

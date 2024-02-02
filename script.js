@@ -1,5 +1,12 @@
 $(document).ready(function () {
     mostraData();
+
+    $('#lista-tarefas li').on('click', function () {
+        if (!$(event.target).is('input[type="checkbox"]')) {
+            var checkbox = $(this).find('input[type="checkbox"]');
+            checkbox.prop('checked', !checkbox.prop('checked'));
+        }
+    })
 })
 
 function mostraData() {
