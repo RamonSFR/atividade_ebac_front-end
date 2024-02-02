@@ -1,8 +1,8 @@
 $(document).ready(function () {
     mostraData();
-    txtAtivaCheckbox();
     chamaPopUp();
     validaForm();
+    limpaTarefas()
 })
 
 function validaForm() {
@@ -12,22 +12,29 @@ function validaForm() {
         const nomeAtividade = $('#nome-tarefa').val();
         const novaAtividade = $('<li style="display-none"></li>');
         $('<input type="checkbox">').appendTo(novaAtividade);
-        novaAtividade.append(nomeAtividade);
+        novaAtividade.append(`<span>${nomeAtividade}</span>`);
         novaAtividade.appendTo('ul');
         novaAtividade.slideDown(500);
 
         $('#nome-tarefa').val('');
         fechaPopUp();
-        txtAtivaCheckbox();
+        validaCheckBox();
     })
 }
 
-function txtAtivaCheckbox() {
+function validaCheckBox() {
     $('#lista-tarefas li').on('click', function () {
         if (!$(event.target).is('input[type="checkbox"]')) {
             var checkbox = $(this).find('input[type="checkbox"]');
             checkbox.prop('checked', !checkbox.prop('checked'));
-            $('li').css("text-decoration", "line-through");
+            
+            var textoTarefa = $(this).find('span');
+
+            if (checkbox.prop('checked')) {
+                $(textoTarefa).css('text-decoration', 'line-through');
+            } else {
+                $(textoTarefa).css('text-decoration', 'none');
+            }
         }
     })
 }
@@ -65,4 +72,11 @@ function mostraData() {
     $('.mes').text(meses[mes - 1]);
     $('.ano').text(ano)
     $('.dia-semana').text(diasSemana[diaSemana]);
+}
+
+function limpaTarefas() {
+    $('#limpar').on('click', () => {
+        $('ul').empty();
+        fechaPopUp();
+    })
 }
