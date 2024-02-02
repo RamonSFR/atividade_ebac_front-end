@@ -105,6 +105,7 @@ body {
     cursor: pointer;
     transition: 0.5s;
     border-radius: 10px;
+    user-select: none;
 }
 
 .list ul li:hover {

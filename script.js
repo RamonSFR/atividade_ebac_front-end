@@ -2,12 +2,13 @@ $(document).ready(function () {
     mostraData();
     chamaPopUp();
     validaForm();
-    limpaTarefas()
+    limpaTarefas();
 })
 
 function validaForm() {
     $('.form').on('submit', (e) => {
         e.preventDefault();
+        validaCheckBox();
 
         const nomeAtividade = $('#nome-tarefa').val();
         const novaAtividade = $('<li style="display-none"></li>');
@@ -23,20 +24,20 @@ function validaForm() {
 }
 
 function validaCheckBox() {
-    $('#lista-tarefas li').on('click', function () {
-        if (!$(event.target).is('input[type="checkbox"]')) {
-            var checkbox = $(this).find('input[type="checkbox"]');
-            checkbox.prop('checked', !checkbox.prop('checked'));
-            
-            var textoTarefa = $(this).find('span');
+    $('#lista-tarefas li').on('click', function (event) {
+        var checkbox = $(this).find('input[type="checkbox"]');
+        var textoTarefa = $(this).find('span');
 
-            if (checkbox.prop('checked')) {
-                $(textoTarefa).css('text-decoration', 'line-through');
-            } else {
-                $(textoTarefa).css('text-decoration', 'none');
-            }
+        if (!$(event.target).is('input[type="checkbox"]')) {
+            checkbox.prop('checked', !checkbox.prop('checked'));
         }
-    })
+
+        if (checkbox.prop('checked')) {
+            textoTarefa.css('text-decoration', 'line-through');
+        } else {
+            textoTarefa.css('text-decoration', 'none');
+        }
+    });
 }
 
 function chamaPopUp() {
