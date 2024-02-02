@@ -1,13 +1,26 @@
 $(document).ready(function () {
     mostraData();
+    validaCheckBox();
+    popUp()
 
+    $('#form').on('submit', (e) => {
+        e.preventDefault();
+
+        const nomeAtividade = $('nome-atividade').val();
+
+    })
+})
+
+function validaCheckBox() {
     $('#lista-tarefas li').on('click', function () {
         if (!$(event.target).is('input[type="checkbox"]')) {
             var checkbox = $(this).find('input[type="checkbox"]');
             checkbox.prop('checked', !checkbox.prop('checked'));
         }
     })
+}
 
+function popUp() {
     $('.btn-add').on('click', () => {
         $('.overlay').fadeIn(200);
         $('.popup').fadeIn(200);
@@ -17,7 +30,7 @@ $(document).ready(function () {
         $('.overlay').fadeOut(200);
         $('.popup').fadeOut(200);
     })
-})
+}
 
 function mostraData() {
     const meses = ['Jan', 'Fev', 'Mar', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Des'];
