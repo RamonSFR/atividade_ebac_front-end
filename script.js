@@ -1,6 +1,6 @@
 $(document).ready(function () {
     mostraData();
-    validaCheckBox();
+    txtAtivaCheckbox();
     popUp()
 
     $('#form').on('submit', (e) => {
@@ -11,7 +11,7 @@ $(document).ready(function () {
     })
 })
 
-function validaCheckBox() {
+function txtAtivaCheckbox() {
     $('#lista-tarefas li').on('click', function () {
         if (!$(event.target).is('input[type="checkbox"]')) {
             var checkbox = $(this).find('input[type="checkbox"]');
