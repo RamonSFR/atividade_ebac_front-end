@@ -7,6 +7,16 @@ $(document).ready(function () {
             checkbox.prop('checked', !checkbox.prop('checked'));
         }
     })
+
+    $('.btn-add').on('click', () => {
+        $('.overlay').fadeIn(200);
+        $('.popup').fadeIn(200);
+    })
+
+    $('#fechar').on('click', () => {
+        $('.overlay').fadeOut(200);
+        $('.popup').fadeOut(200);
+    })
 })
 
 function mostraData() {
