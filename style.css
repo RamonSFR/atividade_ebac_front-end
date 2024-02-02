@@ -89,6 +89,7 @@ body {
 }
 
 .list {
+    width: 100%;
     margin-top: 10%;
     margin-bottom: 25%;
 }
@@ -204,5 +205,10 @@ body {
 
 #fechar {
     cursor: pointer;
-    background: #f3c4af;
+    background: #eebba3;
+}
+
+#limpar {
+    background-color: #f8a27a;
+    cursor: pointer;
 }

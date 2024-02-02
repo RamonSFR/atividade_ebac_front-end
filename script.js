@@ -16,7 +16,7 @@ function validaForm() {
         novaAtividade.appendTo('ul');
         novaAtividade.slideDown(500);
 
-        $('#nome-atividade').val('');
+        $('#nome-tarefa').val('');
         fechaPopUp();
         txtAtivaCheckbox();
     })
@@ -27,6 +27,7 @@ function txtAtivaCheckbox() {
         if (!$(event.target).is('input[type="checkbox"]')) {
             var checkbox = $(this).find('input[type="checkbox"]');
             checkbox.prop('checked', !checkbox.prop('checked'));
+            $('li').css("text-decoration", "line-through");
         }
     })
 }
