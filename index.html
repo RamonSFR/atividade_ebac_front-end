@@ -4,46 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <title>To do List - JQuery</title>
+    <title>Exercício Plugins Jquery</title>
 </head>
 <body>
-    <div class="overlay"></div>
-    <div class="popup">
-        <div class="container-form">
-            <form class="form" autocomplete="off">
-                <h1>Adicionar Nova Tarefa</h1>
-                <input required id="nome-tarefa" type="Nome" placeholder="Nome da Tarefa">
-                <button id="add-tarefa" type="submit">Adicionar Tarefa</button>
-                <button id="fechar" type="reset">Fechar</button>
-                <button id="limpar" type="reset">Limpar Todas as Tarefas</button>
-            </form>
-        </div>
-    </div>
     <div class="container">
         <div class="box">
-            <div class="cabecalho">
-                <div class="cab1">
-                    <h1 class="dia"></h1>
+            <form>
+                <div>
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" name="nome" id="nome">
                 </div>
-                <div class="cab2">
-                    <p class="mes"></p>
-                    <p class="ano"></p>
+                <div>
+                    <label for="email">E-Mail:</label>
+                    <input type="email" name="email" id="email">
                 </div>
-                <cab class="cab3">
-                    <p class="dia-semana"></p>
-                </cab>
-            </div>
-            <div class="list">
-                <ul id="lista-tarefas">
-
-                </ul>
-            </div>
-            <div class="btn-add">
-                <h1>+</h1>
-            </div>
+                <div>
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" name="telefone" id="telefone">
+                </div>
+                <div>
+                    <label for="cpf">CPF:</label>
+                    <input type="text" name="cpf" id="cpf">
+                </div>
+                <div>
+                    <label for="endereco">Endereço Completo:</label>
+                    <input type="text" name="endereco" id="endereco">
+                </div>
+                <div>
+                    <label for="cep">CEP:</label>
+                    <input type="text" name="cep" id="cep">
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
         </div>
     </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<script src="./script.js"></script>
+<script src="./js/jquery.mask.min.js"></script>
+<script src="./js/script.js"></script>
 </html>

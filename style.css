@@ -1,282 +1,58 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Poppins, sans-serif;
-}
-
-:root {
-    --color1: #F5EEE6;
-    --color2: #FFF8E3;
-    --color3: #F3D7CA;
-    --color4: #E6A4B4;
+    font-family: 'Noto Sans', sans-serif;
 }
 
 body {
-    background: linear-gradient(120deg, var(--color1), var(--color2), var(--color3),var(--color4));
-    background-size: 600% 600%;
-    animation: animacaoBg 15s infinite linear;
-}
-
-@keyframes animacaoBg {
-    0% {
-        background-position: 0 85%;
-    }
-    50% {
-        background-position: 100% 20%;
-    }
-    100% {
-        background-position: 0 85%;
-    }
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(44deg, rgba(84, 153, 197, 0.04) 0%, rgba(84, 153, 197, 0.04) 50%,rgba(43, 252, 236, 0.04) 50%, rgba(43, 252, 236, 0.04) 100%),linear-gradient(264deg, rgba(197, 57, 189, 0.04) 0%, rgba(197, 57, 189, 0.04) 50%,rgba(167, 106, 179, 0.04) 50%, rgba(167, 106, 179, 0.04) 100%),linear-gradient(323deg, rgba(76, 28, 237, 0.04) 0%, rgba(76, 28, 237, 0.04) 50%,rgba(115, 208, 165, 0.04) 50%, rgba(115, 208, 165, 0.04) 100%),linear-gradient(236deg, rgba(241, 1, 111, 0.04) 0%, rgba(241, 1, 111, 0.04) 50%,rgba(7, 173, 72, 0.04) 50%, rgba(7, 173, 72, 0.04) 100%),linear-gradient(296deg, rgba(124, 241, 241, 0.04) 0%, rgba(124, 241, 241, 0.04) 50%,rgba(26, 63, 229, 0.04) 50%, rgba(26, 63, 229, 0.04) 100%),linear-gradient(96deg, rgba(87, 80, 82, 0.04) 0%, rgba(87, 80, 82, 0.04) 50%,rgba(104, 13, 102, 0.04) 50%, rgba(104, 13, 102, 0.04) 100%),linear-gradient(254deg, rgba(127, 190, 93, 0.04) 0%, rgba(127, 190, 93, 0.04) 50%,rgba(120, 35, 199, 0.04) 50%, rgba(120, 35, 199, 0.04) 100%),linear-gradient(353deg, rgba(227, 212, 206, 0.04) 0%, rgba(227, 212, 206, 0.04) 50%,rgba(55, 215, 100, 0.04) 50%, rgba(55, 215, 100, 0.04) 100%),linear-gradient(218deg, rgba(32, 99, 251, 0.04) 0%, rgba(32, 99, 251, 0.04) 50%,rgba(230, 154, 131, 0.04) 50%, rgba(230, 154, 131, 0.04) 100%),linear-gradient(266deg, rgb(101, 254, 171),rgb(119, 206, 247));
 }
 
 .container {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .box {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    padding: 2%;
-    background: #fff;
-    width: 20%;
-    height: fit-content;
-    border-radius: 20px;
-}
-
-.cabecalho {
-    width: 100%;
-    height: 15%;
-    display: flex;
-    user-select: none;
-}
-
-.cab1, .cab2, .cab3 {
-    display: flex;
-    align-items: center;
-}
-
-.cab1 h1 { 
-    font-size: 30pt;
-}
-
-.cab2 {
-    color: #787878;
-    margin-left: 3%;
-    font-size: 10pt;
-    font-weight: 100;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-.mes {
-    font-weight: 600;
-    font-size: 12pt;
-}
-
-.cab3 {
-    margin-left: 50%;
-    width: fit-content;
-    font-size: 13pt;
-}
-
-.list {
-    width: 100%;
-    margin-top: 10%;
-    margin-bottom: 25%;
-}
-
-.list ul {
-    list-style-type: none;
-}
-
-.list ul li {
-    color: #787878;
-    font-size: 14pt;
-    margin-bottom: 15px;
-    cursor: pointer;
-    transition: 0.5s;
-    border-radius: 10px;
-    user-select: none;
-}
-
-.list ul li:hover {
-    font-size: 15pt;
-    background-color: var(--color2);
-}
-
-.list ul li input[type="checkbox"] {
-    margin-right: 16px;
-}
-
-.btn-add {
-    font-size: 18pt;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    width: 50px;
-    height: 50px;
-    background: #f5dbbd;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: 0.5s;
-    user-select: none;
-    transition: .5s;
-}
-
-.btn-add:hover {
-    width: 75px;
-    height: 75px;
-    font-size: 25pt;
-}
-
-.popup {
-    display: none;
-    background-color: var(--color1);
-    width: 30%;
+    padding: 32px;
+    background-color: #fff;
+    border-radius: 15px;
+    width: 25%;
     height: 60%;
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 25px;
-    z-index: 1000;
+    display: block;
 }
 
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.5);
-    z-index: 999;
-    display: none;
-}
-
-.container-form {
-    width: 100%;
-    height: 100%;
-    display: flex;
-}
-
-.form {
-    width: 100%;
+.box form {
     display: flex;
     justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.box form div {
+    display: flex;
     flex-direction: column;
 }
 
-.form h1 {
-    color: rgba(0,0,0,0.65);
-    font-size: 30pt;
-    user-select: none;
+.box form div input, 
+.box form button {
+    padding: 8px;
+    height: 30px;
+    margin-bottom: 14px;
 }
 
-.form input,button {
-    width: 70%;
-    height: 7%;
-    border-radius: 0;
+.box form button {
     color: #fff;
     border: none;
-    font-size: 11pt;
-}
-
-#nome-tarefa {
-    margin-top: 10%;
-    color: #000;
-    outline: none;
-    padding: 0 16px;
-}
-
-#add-tarefa {
-    background-color: var(--color3);
-    margin-bottom: 5%;
+    background-color: #65FEAB;
     cursor: pointer;
-}
-
-#fechar {
-    cursor: pointer;
-    background: #eebba3;
-}
-
-#limpar {
-    background-color: #f8a27a;
-    cursor: pointer;
-}
-
-@media only screen and (max-width: 1570px){
-    .box {
-        width: 30%;
-    }
-    .cab3 {
-        margin-left: 45%;
-    }
-    .popup {
-        width: 60%;
-    }
-}
-
-@media only screen and (max-width: 1100px) {
-    .box {
-        width: 50%;
-    }
-    .cab3 {
-        margin-left: 45%;
-    }
-
-    .popup {
-        width: 80%;
-    }
-}
-
-@media only screen and (max-width: 600px) {
-    .box {
-        width: 75%;
-    }
-    .cab3 {
-        margin-left: 25%;
-    }
-    .popup {
-        width: 100%;
-    }
-    .popup form input, .popup form button {
-        width: 95%;
-    }
-}
-
-@media only screen and (max-width: 430px) {
-    .box {
-        width: 90%;
-    }
-    .cab3 {
-        margin-left: 40%;
-    }
-    .popup form input, .popup form button {
-        width: 100%;
-        height: 10%;
-    }
-    .popup h1 {
-        font-size: 20pt;
-    }
-}
-
-@media only screen and (max-height: 800px) {
-    .popup {
-        height: 85%;
-    }
-    .popup form input, .popup form button {
-        width: 70%;
-        height: 10%;
-    }
 }
