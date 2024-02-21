@@ -70,7 +70,7 @@ function mostraData() {
     const diaSemana = data.getDay();
 
     $('.dia').text(dia);
-    $('.mes').text(meses[mes - 1]);
+    $('.mes').text(meses[mes]);
     $('.ano').text(ano)
     $('.dia-semana').text(diasSemana[diaSemana]);
 }
