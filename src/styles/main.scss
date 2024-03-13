@@ -1,5 +1,5 @@
 @use './variaveis.scss';
 
 body {
-    color: $corPrincipal;
+    color: variaveis.$corPrincipal;
 }
