@@ -1,5 +1,9 @@
 @import './variaveis.less';
 
+.flex {
+    display: flex;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -22,31 +26,31 @@ li {
 }
 
 header {
-    background-color: #182C61;
+    background-color: #colors[corCabecalho];
     position: sticky;
     top: 0;
     left: 0;
 }
 
 header .container {
-    display: flex;
+    .flex;
     justify-content: space-between;
     align-items: center;
     padding: 16px 0;
 }
 
 .menu {
-    display: flex;
+    .flex;
 }
 
 .menu li {
     font-weight: bold;
     margin-left: 24px;
-}
 
-.menu li a {
-    color: #fff;
-    text-decoration: none;
+    a {
+        color: #colors[textWhite];
+        text-decoration: none;      
+    }
 }
 
 section {
@@ -69,17 +73,17 @@ section {
 
 .product-button {
     display: block;
-    background-color: #44bd32;
-    color: #fff;
+    background-color: #colors[buttonColor];
+    color: #colors[textWhite];
     text-align: center;
     padding: 8px 0;
     border-radius: 8px;
     margin-top: 8px;
     text-decoration: none;
-}
 
-.product-button:hover {
-    background-color: #4cd137;
+    &:hover {
+        background-color: lighten(#colors[buttonColor],10%);
+    }
 }
 
 @media screen and (@breakpointTablet) {
