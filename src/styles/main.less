@@ -64,36 +64,25 @@ section {
     column-gap: 1%;
     row-gap: 4%;
     width: 100%;
-}
 
-.products-item img {
-    width: 100%;
-    border-radius: 16px;
-}
+    &-item img {
+        width: 100%;
+        border-radius: 16px;
+    }
 
-.products-button {
-    display: block;
-    background-color: #colors[buttonColor];
-    color: #colors[textWhite];
-    text-align: center;
-    padding: 8px 0;
-    border-radius: 8px;
-    margin-top: 8px;
-    text-decoration: none;
-}
+    &-btn {
+        display: block;
+        background-color: #colors[buttonColor];
+        color: #colors[textWhite];
+        text-align: center;
+        padding: 8px 0;
+        border-radius: 8px;
+        margin-top: 8px;
+        text-decoration: none;
 
-.products-button {
-    display: block;
-    background-color: #colors[buttonColor];
-    color: #colors[textWhite];
-    text-align: center;
-    padding: 8px 0;
-    border-radius: 8px;
-    margin-top: 8px;
-    text-decoration: none;
-
-    &:hover {
-        background-color: lighten(#44bd32,10%); // Variável de mapa não funciona nessa função
+        &:hover {
+            background-color: lighten(#44bd32,10%); // Variável de mapa não funciona nessa função
+        }
     }
 }
 
