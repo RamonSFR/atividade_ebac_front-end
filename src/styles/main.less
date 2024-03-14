@@ -66,12 +66,23 @@ section {
     width: 100%;
 }
 
-.product-item img {
+.products-item img {
     width: 100%;
     border-radius: 16px;
 }
 
-.product-button {
+.products-button {
+    display: block;
+    background-color: #colors[buttonColor];
+    color: #colors[textWhite];
+    text-align: center;
+    padding: 8px 0;
+    border-radius: 8px;
+    margin-top: 8px;
+    text-decoration: none;
+}
+
+.products-button {
     display: block;
     background-color: #colors[buttonColor];
     color: #colors[textWhite];
@@ -82,7 +93,7 @@ section {
     text-decoration: none;
 
     &:hover {
-        background-color: lighten(#colors[buttonColor],10%);
+        background-color: lighten(#44bd32,10%); // Variável de mapa não funciona nessa função
     }
 }
 
