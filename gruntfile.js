@@ -19,6 +19,16 @@ module.exports = function (grunt) {
                     'dist/styles/main.min.css': 'src/styles/main.less'
                 }
             }
+        },
+        uglify: {
+            options: {
+                mangle: false
+            },
+            my_target: {
+                files: {
+                    'dist/scripts/main.min.js' : 'src/scripts/main.js',
+                }
+            }
         }
     })
 
@@ -27,6 +37,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('default', ['less:development'])
     grunt.registerTask('build', [
-        'less:build'
+        'less:build',
+        'uglify'
     ])
 }
