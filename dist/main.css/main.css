@@ -14,13 +14,11 @@
 .produto--imagem {
   width: 100%;
 }
-.produto-nome {
-  /* elemento */
+.produto--nome {
   font-size: 1.2em;
   margin: 8px 0;
 }
-.produto-descricao {
-  /* elemento */
+.produto--descricao {
   color: gray;
 }
 .em-destaque {
