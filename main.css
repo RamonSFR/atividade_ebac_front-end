@@ -70,3 +70,41 @@ header .container {
 .numbers-item h4 {
     font-size: .3em;
 }
+
+.inputs {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.search-area {
+    display: flex;
+}
+
+.search-input {
+    width: 90%;
+    padding: 8px 16px;
+    border-radius: 5px 0 0 5px;
+    border: 1px solid var(--header-color);
+    color: var(--header-color);
+}
+
+.search-input::placeholder {
+    color: var(--header-color);
+}
+
+.search-input:focus {
+    border: 2px solid var(--header-color);
+    outline: none;
+}
+
+.btn-buscar {
+    width: 10%;
+    padding: 8px;
+    background-color: var(--header-color);
+    color: var(--bg-color);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+}
