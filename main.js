@@ -35,6 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
             document.querySelector('#seguidores').innerHTML = "";
             document.querySelector('#seguindo').innerHTML = "";
             document.querySelector(".profile-avatar").src = "https://via.placeholder.com/180x180";
+            document.querySelector(".profile-link").href = "#";
         })
     })
 });
