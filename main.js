@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const repos = json.public_repos;
             const followers = json.followers;
             const following = json.following;
+            const profileLink = json.html_url;
             console.log(json);
 
 
@@ -24,6 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
             document.querySelector('#seguidores').innerHTML = followers;
             document.querySelector('#seguindo').innerHTML = following;
             document.querySelector(".profile-avatar").src = avatar;
+            document.querySelector(".profile-link").href = profileLink;
         })
         .catch(function(erro) {
             alert("Digite um perfil válido!");
