@@ -34,9 +34,15 @@ class Caminhao extends Veiculo {
     }
 }
 
-const carro1 = new Carro('BMW', '320i', '2020', '184');
+const carro1 = new Carro('BMW', '320i', '2020', '184');;
+const carro2 = new Carro('Mitsubishi', 'Lancer Evo X', '2008', '295');
+const carro3 = new Carro('Chevrolet', 'Opala', '1987', '250');
 
-const moto1 = new Moto('Kawasaki', 'Ninja', '2012', '300')
+const moto1 = new Moto('Kawasaki', 'Ninja', '2012', '300');
+const moto2 = new Moto('Yamaha', 'XJ6', '2012', '600');
+const moto3 = new Moto('Ducati', 'Diavel', '2020', '1158');
 
-console.log(carro1);
-console.log(moto1);
+const caminhao1 = new Caminhao('Volvo', 'FH16', '2020', '780');
+
+let veiculos = [carro1, carro2, carro3, moto1, moto2, moto3, caminhao1];
+console.log(veiculos);
