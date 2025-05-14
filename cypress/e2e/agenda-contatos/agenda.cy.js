@@ -27,4 +27,12 @@ describe("testes para agenda interativa", () => {
         )
         cy.get('.contato:last-child').should('contain', "Júlia")
     })
+
+    it("deve deletar contato", () => {
+        cy.get('.contato').its('length').then((qtd) => {
+            const quantidadeDeContatos = qtd
+            cy.get(':nth-child(2) > .sc-gueYoa > .delete').click()
+            cy.get('.contato').should('have.length', quantidadeDeContatos - 1)
+        })  
+    })
 })
