@@ -1,0 +1,30 @@
+/// <reference types="cypress" />
+
+describe("testes para agenda interativa", () => {
+    beforeEach(() => {
+        cy.visit("https://agenda-contatos-react.vercel.app")
+    })
+
+    function adicionaContato(nome, email, tel) {
+        cy.get('[type="text"]').type(nome)
+        cy.get('[type="email"]').type(email)
+        cy.get('[type="tel"]').type(tel)
+        cy.get('.adicionar').click()
+    }
+    
+    it("deve adicionar contato", () => {
+        adicionaContato(
+            "Ramon Sávio",
+            "ramon@gmail.com",
+            "83 92325373",
+        )
+        cy.get('.contato:last-child').should('contain', "Ramon Sávio")
+
+        adicionaContato(
+            "Júlia",
+            "julia@gmail.com",
+            "11 92325353",
+        )
+        cy.get('.contato:last-child').should('contain', "Júlia")
+    })
+})
